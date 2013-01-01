@@ -15,6 +15,7 @@ function ModalRecetaActive() {
             transform: `translate( -${50}%, -${50}%)`,
             position: "absolute",
             width: 450,
+            maxWidth:'90%',
             overflowY:'scroll',
             backgroundColor: theme.palette.background.paper,
             boxShadow: theme.shadows[5],
