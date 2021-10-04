@@ -10,7 +10,9 @@ function Card({ receta }) {
     };
     return (
         <div className="list-card">
+        <br />
             <h2 className="card-title">{receta.strDrink}</h2>
+            <br />
             <img
                 className="card-img"
                 src={receta.strDrinkThumb}
@@ -23,7 +25,7 @@ function Card({ receta }) {
                     }}
                     className="card-btn"
                 >
-                    See Details..
+                    See Details
                 </button>
             </div>
         </div>

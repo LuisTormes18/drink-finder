@@ -1,14 +1,11 @@
 import HomeScreen from "./components/home/HomeScreen";
-import DrinkFinderProvider from "./context/drinkFinder/drinkFinderProvider";
-import UiProvider from "./context/ui/uiProvider";
+import DrinkFinderProvider from "./context/drinkFinder/DrinkFinderProvider";
 
 function App() {
     return (
         <div className="App">
             <DrinkFinderProvider>
-                <UiProvider>
                     <HomeScreen />
-                </UiProvider>
             </DrinkFinderProvider>
         </div>
     );

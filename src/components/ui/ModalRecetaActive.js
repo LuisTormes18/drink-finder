@@ -1,29 +1,27 @@
 import React, { useContext, useState } from "react";
-import { Modal } from "@material-ui/core/Modal";
-import { MakeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import { makeStyles } from "@material-ui/core/styles";
 
 import { drinkFinderContext } from "./../../context/drinkFinder/DrinkFinderProvider";
+
 
 function ModalRecetaActive() {
     const { recetaActive, openModal, setOpenModal } =
         useContext(drinkFinderContext);
-    const getModalStyles = () => {
-        return {
-            top: `${50}%`,
-            left: `${50}%`,
-            transform: `translate(-50%,50%)`,
-        };
-    };
-    const useStyles = MakeStyles((theme) => ({
+    
+    const useStyles = makeStyles((theme) => ({
         paper: {
+            top:`${50}%`,
+            left:`${50}%`,
+             transform: `translate( -${50}%, -${50}%)`,
             position: "absolute",
-            width: 600,
+            width: 500,
             backgroundColor: theme.palette.background.paper,
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
         },
     }));
-    const [modalStyles] = useState(getModalStyles());
+   
     const classModal = useStyles();
 
     const getAndFormatIngredients = () => {
@@ -46,25 +44,41 @@ function ModalRecetaActive() {
         <>
             <Modal
                 open={openModal}
-                onClose={() => {
+                onClick={() => {
                     setOpenModal(false);
+
                 }}
             >
-                <div styles={modalStyles} className={classModal.paper}>
+                <div className={classModal.paper}>
+                    <br />
                     <h2>{recetaActive?.strDrink}</h2>
+                    <br />
                     
                     <h3>Instructions</h3>
+                    <br />
+
                     <p>{recetaActive?.strInstructions}</p>
-                    <div className="img">
+                    <br />
+
+                    <div className="modal-img">
                         <img
-                            src={recetaActive.srtDrinkTumb}
-                            alt={recetaActive.strDrink}
+                            src={recetaActive?.srtDrinkTumb}
+                            alt={recetaActive?.strDrink}
                         />
+                         
                     </div>
+                    <br />
+
                     <h3>Ingredients</h3>
-                    <p>
-                        <ul>{getAndFormatIngredients()}</ul>
-                    </p>
+                    <br />
+
+                    
+                        <ul>
+                        {
+                        	!!recetaActive && (getAndFormatIngredients())
+                        }
+                        </ul>
+                   
                 </div>
             </Modal>
         </>

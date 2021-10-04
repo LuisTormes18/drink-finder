@@ -10,7 +10,7 @@ function SearchBar() {
         category: "",
     });
 
-    const { drink, category } = inputValues;
+    const { drink } = inputValues;
 
     const handleInputChange = ({target}) => {
         setInputValues({
@@ -41,7 +41,7 @@ function SearchBar() {
                         </option>
                     ))}
                 </select>
-                <input type="submit" value="Search" onClick={handleSearch} />
+                <input type="submit" value="Search" className='btn'onClick={handleSearch} />
             </form>
         </div>
     );

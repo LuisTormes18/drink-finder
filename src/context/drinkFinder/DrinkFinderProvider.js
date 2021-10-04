@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from "react";
 import {
     startLoadCategories,
     startLoadRecetas,
-    startLoadDeatils,
+    startLoadDetails,
 } from "./../../helpers/index";
 
 export const drinkFinderContext = createContext();
@@ -30,6 +30,7 @@ function DrinkFinderProvider({ children }) {
 
         const loadRecetas = async () => {
             const data = await startLoadRecetas(search);
+
             setRecetas(data);
         };
         loadRecetas();
@@ -37,7 +38,9 @@ function DrinkFinderProvider({ children }) {
 
     useEffect(() => {
         const loadDetails = async () => {
-            const details = await startLoadDeatils(setIdSearchDetails);
+            const details = await startLoadDetails(setIdSearchDetails);
+            
+              
             setRecetaActive(details);
         };
         loadDetails();
