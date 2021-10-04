@@ -1,3 +1,4 @@
+import HomeScreen from "./components/home/HomeScreen";
 import DrinkFinderProvider from "./context/drinkFinder/drinkFinderProvider";
 import UiProvider from "./context/ui/uiProvider";
 
@@ -6,7 +7,7 @@ function App() {
         <div className="App">
             <DrinkFinderProvider>
                 <UiProvider>
-                    <h1>Mi App</h1>
+                    <HomeScreen />
                 </UiProvider>
             </DrinkFinderProvider>
         </div>
