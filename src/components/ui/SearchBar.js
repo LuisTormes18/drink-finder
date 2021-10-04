@@ -12,14 +12,14 @@ function SearchBar() {
 
     const { drink } = inputValues;
 
-    const handleInputChange = ({target}) => {
+    const handleInputChange = ({ target }) => {
         setInputValues({
             ...inputValues,
             [target.name]: target.value,
         });
     };
     const handleSearch = (e) => {
-        e.preventDefault();       
+        e.preventDefault();
         setSearch(inputValues);
     };
 
@@ -41,7 +41,12 @@ function SearchBar() {
                         </option>
                     ))}
                 </select>
-                <input type="submit" value="Search" className='btn'onClick={handleSearch} />
+                <input
+                    type="submit"
+                    value="Search"
+                    className="btn"
+                    onClick={handleSearch}
+                />
             </form>
         </div>
     );

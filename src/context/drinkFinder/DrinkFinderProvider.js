@@ -39,13 +39,12 @@ function DrinkFinderProvider({ children }) {
     useEffect(() => {
         const loadDetails = async () => {
             const details = await startLoadDetails(setIdSearchDetails);
-            
-              
+
             setRecetaActive(details);
         };
         loadDetails();
     }, [idSearchDetails]);
-    
+
     useEffect(() => {
         if (!openModal) {
             setRecetaActive(null);
