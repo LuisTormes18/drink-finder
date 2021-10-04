@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import DrinkFinderProvider from "./context/drinkFinder/drinkFinderProvider";
+import UiProvider from "./context/ui/uiProvider";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <DrinkFinderProvider>
+                <UiProvider>
+                    <h1>Mi App</h1>
+                </UiProvider>
+            </DrinkFinderProvider>
+        </div>
+    );
 }
-
 export default App;
