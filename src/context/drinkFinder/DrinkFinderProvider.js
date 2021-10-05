@@ -30,7 +30,6 @@ function DrinkFinderProvider({ children }) {
        if(search){
          const loadRecetas = async () => {
             const data = await startLoadRecetas(search);
-
             setRecetas(data);
         };
         loadRecetas();
@@ -66,6 +65,7 @@ function DrinkFinderProvider({ children }) {
         setIdSearchDetails,
         openModal,
         setOpenModal,
+
     };
 
     return (

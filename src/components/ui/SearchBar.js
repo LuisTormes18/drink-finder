@@ -32,6 +32,7 @@ console.log(category)
             return;
         }
         setSearch(inputValues);
+
     };
 
     return (

@@ -123,12 +123,14 @@ select:focus {
     align-items: center;
     column-gap: 15px;
 }
-.list .title {
-}
+
 
 .list-card img {
     width: 90%;
     height: 280px;
+}
+.card-title {
+	text-align: center;
 }
 .list-card .card-body {
     width: 90%;
@@ -161,4 +163,7 @@ select:focus {
 
 .modal-container p {
     margin-left: 40px;
+}
+ul{
+	padding-left: 40px;
 }

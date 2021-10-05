@@ -19,6 +19,10 @@ function ModalRecetaActive() {
             backgroundColor: theme.palette.background.paper,
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
+            paddingTop:'40px',
+            paddingBotton:'40px',
+            display:'block',
+            height:'100%',
         },
     }));
 
@@ -30,7 +34,7 @@ function ModalRecetaActive() {
         for (let i = 1; i < 16; i++) {
             if (recetaActive[`strIngredient${i}`]) {
                 ingredients.push(
-                    <li>
+                    <li key={`strIngredient${i}`}>
                         {recetaActive[`strIngredient${i}`]} -
                         {recetaActive[`strMeasure${i}`]}
                     </li>

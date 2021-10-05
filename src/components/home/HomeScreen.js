@@ -13,10 +13,17 @@ function HomeScreen() {
 
             <div className="home-content">
                 <div className="list">
-                    {recetas.length !== 0 &&
+
+                    {
+                                 recetas.length !== 0 &&
                         recetas.map((receta) => (
                             <Card key={receta.idDrink} receta={receta} />
-                        ))}
+                        ))
+                        
+
+                    }
+
+                   
                 </div>
             </div>
             <ModalRecetaActive />
