@@ -10,7 +10,7 @@ function SearchBar() {
         category: "",
     });
 
-    const { drink } = inputValues;
+    const { drink, category} = inputValues;
 
     const handleInputChange = ({ target }) => {
         setInputValues({
@@ -20,6 +20,17 @@ function SearchBar() {
     };
     const handleSearch = (e) => {
         e.preventDefault();
+
+console.log(category)
+        if(category.trim() === ""){
+            alert('Seleccione una categoria');
+            return;
+        }
+
+        if(drink.trim()===''){
+             alert('Seleccione un ingrediente');
+            return;
+        }
         setSearch(inputValues);
     };
 
@@ -32,7 +43,7 @@ function SearchBar() {
                     value={drink}
                     onChange={handleInputChange}
                 />
-                <select name="category" value="" onChange={handleInputChange}>
+                <select name="category" onChange={handleInputChange}>
                     <option>--Select to category--</option>
 
                     {categories.map(({ strCategory }) => (

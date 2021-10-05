@@ -26,28 +26,35 @@ function DrinkFinderProvider({ children }) {
     }, []);
 
     useEffect(() => {
-        console.log("Search....", search);
 
-        const loadRecetas = async () => {
+       if(search){
+         const loadRecetas = async () => {
             const data = await startLoadRecetas(search);
 
             setRecetas(data);
         };
         loadRecetas();
+       }
     }, [search]);
 
     useEffect(() => {
-        const loadDetails = async () => {
-            const details = await startLoadDetails(setIdSearchDetails);
+
+
+     if(idSearchDetails !==null){
+   const loadDetails = async () => {
+            const details = await startLoadDetails(idSearchDetails);
 
             setRecetaActive(details);
         };
         loadDetails();
+     }
     }, [idSearchDetails]);
 
     useEffect(() => {
         if (!openModal) {
             setRecetaActive(null);
+            setIdSearchDetails(null)
+
         }
     }, [openModal]);
 

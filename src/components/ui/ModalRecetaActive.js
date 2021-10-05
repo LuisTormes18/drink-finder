@@ -14,7 +14,8 @@ function ModalRecetaActive() {
             left: `${50}%`,
             transform: `translate( -${50}%, -${50}%)`,
             position: "absolute",
-            width: 500,
+            width: 450,
+            overflowY:'scroll',
             backgroundColor: theme.palette.background.paper,
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
@@ -27,10 +28,10 @@ function ModalRecetaActive() {
         const ingredients = [];
 
         for (let i = 1; i < 16; i++) {
-            if (recetaActive[`strIngredients${i}`]) {
+            if (recetaActive[`strIngredient${i}`]) {
                 ingredients.push(
                     <li>
-                        {recetaActive[`strIngredients${i}`]} -
+                        {recetaActive[`strIngredient${i}`]} -
                         {recetaActive[`strMeasure${i}`]}
                     </li>
                 );
@@ -60,7 +61,7 @@ function ModalRecetaActive() {
 
                     <div className="modal-img">
                         <img
-                            src={recetaActive?.srtDrinkTumb}
+                            src={recetaActive?.strDrinkThumb}
                             alt={recetaActive?.strDrink}
                         />
                     </div>

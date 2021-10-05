@@ -21,7 +21,7 @@ function Card({ receta }) {
             <div className="card-body">
                 <button
                     onClick={() => {
-                        handleSeeDetails(receta.strIdDrink);
+                        handleSeeDetails(receta.idDrink);
                     }}
                     className="card-btn"
                 >
