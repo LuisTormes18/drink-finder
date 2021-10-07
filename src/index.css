@@ -100,7 +100,7 @@ select:focus {
 }
 
 .list {
-	padding-top: 100px;
+	padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
 
