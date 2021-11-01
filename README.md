@@ -1,7 +1,8 @@
 # Drink Finder
 
-Este proyecto es un buscador de bebidas, hecho con react y la api de **thecocktaildb**,
-el estado de la aplicacion esta manejado con ContexApi
+This project is a beverage finder, made with react and the api of
+** thecocktaildb **,
+the state of the application is managed with ContexApi.
 
 ## Preview
 Insert here an image of the preview if your project has one. The image can be into the project, you have to indicate the route and look like this.
@@ -16,4 +17,4 @@ npm install
 
 ## Demo 
 
-If you want to see the demo of this proyect deployed, you can visit [Demo of the proyect](https://lt-drinkfinder.netlify.app/)
+If you want to see the demo of this project deployed, you can visit [Demo of the project](https://lt-drinkfinder.netlify.app/)
