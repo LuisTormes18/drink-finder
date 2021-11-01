@@ -42,6 +42,7 @@ console.log(category)
                     type="value"
                     name="drink"
                     value={drink}
+                    placeholder='Ingredient'
                     onChange={handleInputChange}
                 />
                 <select name="category" onChange={handleInputChange}>
