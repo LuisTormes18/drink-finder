@@ -1,166 +1,167 @@
-body {
-    font-family: Helvetica, Arial, sans-serif;
-
-    background-color: #f1f1f1;
-}
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: Raleway, sans-serif;
+  background-color: #f1f1f1;
+/*  background-color: red;*/
+}
+
 
 :root {
-    --primary: #181818;
+  --primary: #181818;
 }
 
 .home-header {
-    background-color: white;
-    height: auto;
-    padding: 30px;
+  background-color: white;
+  height: auto;
+  padding: 30px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-    flex-wrap: wrap;
-    box-shadow: 1px 1px 2px 2px #c2c2c2;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 2px 2px #c2c2c2;
 }
 
 .logo {
-    font-weight: bold;
-    color: #c2c2c2;
-    padding: 20px;
+  font-weight: bold;
+  color: #c2c2c2;
+  padding: 20px;
 }
 .logo span {
-    color: green;
+  color: green;
 }
 
 .search-bar {
-    box-shadow: 1px 1px 1px 1px #f1f1f1;
-    border-radius: 28px;
-    height: auto;
+  box-shadow: 1px 1px 1px 1px #f1f1f1;
+  border-radius: 28px;
+  height: auto;
 
-    display: flex;
+  display: flex;
 }
 .search-bar input {
-    border: none;
-    padding: 15px 20px;
-    border-radius: 28px 0px 0px 28px;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 28px 0px 0px 28px;
 }
 .search-bar select {
-    padding: 15px 20px;
-    border: none;
-    border-left: 1px solid #f1f1f1;
-    cursor: pointer;
+  padding: 15px 20px;
+  border: none;
+  border-left: 1px solid #f1f1f1;
+  cursor: pointer;
 }
 .search-bar input:focus,
 select:focus {
-    outline: none;
+  outline: none;
 }
 .search-bar .btn {
-    height: 100%;
-    border-radius: 0 28px 28px 0;
-    width: 80px;
-    cursor: pointer;
-    background-color: #c2c2c2;
+  height: 100%;
+  border-radius: 0 28px 28px 0;
+  width: 80px;
+  cursor: pointer;
+  background-color: #c2c2c2;
 }
 
 .search-bar .btn:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 @media (max-width: 555px) {
-    .search-bar {
-        flex-direction: column;
-        justify-content: center;
+  .search-bar {
+    flex-direction: column;
+    justify-content: center;
 
-        padding: 20px 10%;
-    }
-    .search-bar input,
-    select {
-        width: 100%;
-        border-radius: 0;
+    padding: 20px 10%;
+  }
+  .search-bar input,
+  select {
+    width: 100%;
+    border-radius: 0;
 
-        margin-bottom: 30px;
-        border-bottom: 1px solid #c2c2c2;
-    }
-    .search-bar select {
-        border-left: 0px;
-        border-bottom: 1px solid #c2c2c2;
-    }
-    .search-bar .btn {
-        width: 100%;
-        border-radius: 28px 28px 28px 28px;
-    }
+    margin-bottom: 30px;
+    border-bottom: 1px solid #c2c2c2;
+  }
+  .search-bar select {
+    border-left: 0px;
+    border-bottom: 1px solid #c2c2c2;
+  }
+  .search-bar .btn {
+    width: 100%;
+    border-radius: 28px 28px 28px 28px;
+  }
 }
 
 /*home-content*/
 .home-content {
-    padding: 40px 10%;
+  padding: 40px 10%;
 }
 
 .list {
-	padding-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
 
-    justify-content: center;
-    gap: 20px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .list .list-card {
-    background-color: white;
-    width: 300px;
-    min-width: 300px;
-    height: 450px;
+  background-color: white;
+  width: 300px;
+  min-width: 300px;
+  height: 450px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    column-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
 }
-
 
 .list-card img {
-    width: 90%;
-    height: 280px;
+  width: 90%;
+  height: 280px;
 }
 .card-title {
-	text-align: center;
+  text-align: center;
 }
 .list-card .card-body {
-    width: 90%;
+  width: 90%;
 }
 .list-card .card-body .card-btn {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #c2c2c2;
-    width: 100%;
-    border: none;
-    cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #c2c2c2;
+  width: 100%;
+  border: none;
+  cursor: pointer;
 
-    color: green;
+  color: green;
 }
 .list-card .card-body .card-btn:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /*modal*/
 
 .modal-img {
-    height: 400px;
-    width: 100%;
-    padding: 20px 5%;
+  height: 400px;
+  width: 100%;
+  padding: 20px 5%;
 }
 .modal-img img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .modal-container p {
-    margin-left: 40px;
+  margin-left: 40px;
 }
-ul{
-	padding-left: 40px;
+ul {
+  padding-left: 40px;
 }
