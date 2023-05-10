@@ -7,10 +7,13 @@ export const startLoadCategories = async () => {
   return categories.drinks;
 };
 
-export const startLoadRecetas = async ({ drink="milk", category="Ordinary Drink" }) => {
+export const startLoadRecetas = async ({
+  drink = "milk",
+  category = "Ordinary Drink",
+}) => {
   const resp = await fetch(`${base_url}filter.php?i=${drink}&c=${category}`);
   const recetas = await resp.json();
-  return recetas.drinks.slice(0,12);
+  return recetas.drinks.slice(0, 12);
 };
 export const startLoadRandomDrinks = async () => {
   const resp = await fetch(`${base_url}random.php`);

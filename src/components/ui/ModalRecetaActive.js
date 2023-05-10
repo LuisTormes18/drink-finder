@@ -24,7 +24,7 @@ function ModalRecetaActive() {
       paddingBotton: "40px",
       display: "block",
       height: "100%",
-      maxHeight:"600px",
+      maxHeight: "600px",
     },
   }));
 

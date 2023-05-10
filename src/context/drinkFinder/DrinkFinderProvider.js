@@ -4,14 +4,17 @@ import {
   startLoadCategories,
   startLoadRecetas,
   startLoadDetails,
-  startLoadRandomDrinks
+  startLoadRandomDrinks,
 } from "./../../helpers";
 
 export const drinkFinderContext = createContext();
 
 function DrinkFinderProvider({ children }) {
   const [categories, setCategories] = useState([]);
-  const [search, setSearch] = useState({ drink:"milk", category:"Ordinary Drink" });
+  const [search, setSearch] = useState({
+    drink: "milk",
+    category: "Ordinary Drink",
+  });
   const [recetas, setRecetas] = useState([]);
   const [idSearchDetails, setIdSearchDetails] = useState(null);
   const [recetaActive, setRecetaActive] = useState(null);
@@ -22,21 +25,19 @@ function DrinkFinderProvider({ children }) {
     const loadCategories = async () => {
       const data = await startLoadCategories();
       setCategories(data);
-
     };
     loadCategories();
   }, []);
 
   useEffect(() => {
     if (search.drink === "") {
-      
-    }  
+    }
 
     const loadRecetas = async () => {
-        const data = await startLoadRecetas(search);
-        setRecetas(data);
-      };
-      loadRecetas();
+      const data = await startLoadRecetas(search);
+      setRecetas(data);
+    };
+    loadRecetas();
   }, [search]);
 
   useEffect(() => {
